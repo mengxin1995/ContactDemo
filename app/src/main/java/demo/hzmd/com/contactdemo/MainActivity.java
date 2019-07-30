@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         getContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[] permissList = {Manifest.permission.READ_CONTACTS, Manifest.permission.READ_PHONE_STATE};
+                String[] permissList = {Manifest.permission.READ_CONTACTS};
                 addPermissByPermissionList(MainActivity.this, permissList, PERMISS_CONTACT);
             }
         });
