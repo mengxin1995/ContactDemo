@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Contact_Test";
@@ -51,10 +52,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showContacts() {
-        long begin = new Date().getTime();
-        ArrayList<ContactsInfo> contacts = ContactUtils.getAllContacts(MainActivity.this);
+        HashMap<String, ArrayList<String>> contacts = ContactUtils.getAllContacts(MainActivity.this);
         long end = new Date().getTime();
-        System.out.println("@@ begin = " + begin + " end = " + end);
         showContact.setText(contacts.toString());
         Log.e(TAG, "contacts:" + contacts.toString());
     }
